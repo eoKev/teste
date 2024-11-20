@@ -18,7 +18,7 @@ import com.example.musicwhisky1.model.Artista
 )
 data class Album(
     @PrimaryKey(autoGenerate = true)
-    val IdAlbum: Int = 0,
+    val idAlbum: Int = 0,
     val nomeAlbum: String,
     val quantidadeMusicas: Int = 0,
     val duracaAlbum: String,
