@@ -16,21 +16,20 @@ import com.example.musicwhisky1.model.AlbumComMusicas
 interface AlbumDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun inserirAlbum(album: Album)
+    suspend fun inserir(album: Album)
 
-    // Obter todos os álbuns
     @Query("SELECT * FROM albuns")
-    fun listarAlbuns(): LiveData<List<Album>>
+    suspend fun buscarTodos(): List<Album>
 
     //Obeter um album especifico pelo Id
-    @Query("SELECT * FROM albuns WHERE idAlbum =:albumId")
-    fun listarAlbumPorId( albumId: Int): LiveData<Album>
+    @Query("SELECT * FROM albuns WHERE id = id")
+    fun buscarPorId( albumId: Int): LiveData<Album>
 
     @Delete
-    suspend fun deletarAlbum(album: Album)
+    suspend fun deletar(album: Album)
 
     @Update
-    suspend fun atualizarAlbum(album: Album)
+    suspend fun atualizar(album: Album)
 
 
 
