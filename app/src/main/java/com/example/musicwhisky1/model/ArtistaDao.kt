@@ -22,6 +22,7 @@ interface ArtistaDao {
     @Update
     suspend fun atualizar(artista: Artista)
 
-
+    @Query("SELECT COUNT(*) FROM artistas WHERE id = :id")
+    suspend fun verificarArtistaExiste(id: Int): Boolean
 
 }
