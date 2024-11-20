@@ -4,7 +4,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.musicwhisky.Album
-import com.example.musicwhisky.model.ArtistaDao
 import com.example.musicwhisky1.model.AlbumDao
 import kotlinx.coroutines.launch
 

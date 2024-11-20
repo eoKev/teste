@@ -13,18 +13,18 @@ import com.example.musicwhisky1.model.Artista
 interface ArtistaDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun inserirArtista(artista: Artista)
+    suspend fun inserir(artista: Artista)
 
-    @Query("SELECT * FROM artistas WHERE idArtista = :idArtista")
-    fun buscarArtistaPorId(idArtista: Int): LiveData<Artista>
+    @Query("SELECT * FROM artistas WHERE id = :idArtista")
+    fun buscarPorId(idArtista: Int): LiveData<Artista>
 
     @Query("SELECT * FROM artistas")
-    suspend fun buscarTodosArtista(): List<Artista>
+    suspend fun buscarTodos(): List<Artista>
 
     @Delete
-    suspend fun deletarArtista(artista: Artista)
+    suspend fun deletar(artista: Artista)
 
     @Update
-    suspend fun atualizarArtista(artista: Artista)
+    suspend fun atualizar(artista: Artista)
 
 }

@@ -3,7 +3,7 @@ package com.example.mvvm2.viewmodel
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.musicwhisky.model.MusicaDao
+import com.example.musicwhisky1.dao.MusicaDao
 import com.example.musicwhisky1.model.Musica
 import kotlinx.coroutines.launch
 
