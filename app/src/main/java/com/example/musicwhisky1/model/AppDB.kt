@@ -4,14 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.musicwhisky.Album
 import com.example.musicwhisky.model.AlbumDao
 import com.example.musicwhisky.model.ArtistaDao
 import com.example.musicwhisky.model.MusicaDao
-import com.example.musicwhisky.model.Musica
-import com.example.musicwhisky.model.Album
-import com.example.musicwhisky.model.Artista
+import com.example.musicwhisky1.model.Artista
+import com.example.musicwhisky1.model.Musica
 
-@Database(entities = [Artista::class, Musica:class, Album::class], version = 1)
+@Database(entities = [Artista::class, Musica::class, Album::class], version = 1)
 abstract class AppDB : RoomDatabase() {
 
     abstract fun artistaDao(): ArtistaDao
