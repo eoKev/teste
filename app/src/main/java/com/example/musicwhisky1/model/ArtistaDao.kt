@@ -5,7 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.musicwhisky.Model.Artista
+import com.example.musicwhisky1.model.Artista
 
 @Dao
 interface ArtistaDao {

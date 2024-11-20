@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.example.musicwhisky1.model.Musica
 
 @Dao
 interface MusicaDao {

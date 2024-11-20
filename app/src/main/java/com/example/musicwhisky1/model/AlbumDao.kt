@@ -1,10 +1,11 @@
-package com.example.musicwhisky.model
+package com.example.musicwhisky1.model
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.example.musicwhisky.Album
 
 @Dao
 interface AlbumDao {
