@@ -9,12 +9,12 @@ import com.example.musicwhisky1.model.Artista
     foreignKeys = [
         ForeignKey(
             entity = Artista::class,
-            parentColumns = ["idArtista"],
+            parentColumns = ["id"],
             childColumns = ["idArtista"],
             onDelete = ForeignKey.CASCADE
         )
     ],
-    indices = [Index(value = ["idArtista"])]
+    indices = [Index(value = ["id"])]
 )
 data class Album(
     @PrimaryKey(autoGenerate = true)

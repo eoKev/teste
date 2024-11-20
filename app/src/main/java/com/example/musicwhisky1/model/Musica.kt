@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
     foreignKeys = [
         ForeignKey(
             entity = Artista::class, // classe na qual esta sendo pega a chave estrangeira
-            parentColumns = ["idArtista"], // coluna na tabela Artistas
+            parentColumns = ["id"], // coluna na tabela Artistas
             childColumns = ["idArtista"], // coluna na tabela Musica
             onDelete = ForeignKey.CASCADE // Define o comportamento em caso de delet de artista, o mesmo sera removido da tabela Musicas
         )
