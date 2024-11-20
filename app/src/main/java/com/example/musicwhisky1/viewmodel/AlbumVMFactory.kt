@@ -2,7 +2,7 @@ package com.example.musicwhisky1.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.musicwhisky1.model.AlbumDao
+import com.example.musicwhisky1.dao.AlbumDao
 import com.example.mvvm2.viewmodel.AlbumVM
 
 

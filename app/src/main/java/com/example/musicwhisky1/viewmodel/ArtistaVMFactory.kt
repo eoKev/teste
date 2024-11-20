@@ -2,7 +2,7 @@ package com.example.musicwhisky1.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.musicwhisky.model.ArtistaDao
+import com.example.musicwhisky1.dao.ArtistaDao
 import com.example.mvvm2.viewmodel.ArtistaVM
 
 class ArtistaVMFactory(private val artistaDao: ArtistaDao) : ViewModelProvider.Factory {
