@@ -8,7 +8,7 @@ import com.example.musicwhisky.model.ArtistaDao
 import com.example.musicwhisky1.model.AlbumDao
 import kotlinx.coroutines.launch
 
-class AlbumVM(private val albumDao: AlbumDao, private val artistaDao: ArtistaDao) : ViewModel() {
+class AlbumVM(private val albumDao: AlbumDao) : ViewModel() {
 
     var listaAlbuns = mutableStateOf(listOf<Album>())
         private set
