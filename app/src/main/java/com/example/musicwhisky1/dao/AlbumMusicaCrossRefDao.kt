@@ -27,7 +27,7 @@ interface AlbumMusicaCrossRefDao {
     // deletar um album e suas associações com musicas
     @Transaction
     suspend fun excluirAlbumEAssociados(album: Album) {
-        excluirAssociacoesDoAlbum(album.idAlbum)
+        excluirAssociacoesDoAlbum(album.id)
         excluirAlbumBase(album)
     }
     @Delete

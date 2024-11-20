@@ -16,6 +16,5 @@ class AlbumVMFactory (private val albumDao: AlbumDao) : ViewModelProvider.Factor
         throw IllegalArgumentException("Classe Viewmodel desconhecida!")
     }
 
-
 }
 
