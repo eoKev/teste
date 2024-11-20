@@ -1,5 +1,6 @@
 package com.example.musicwhisky1.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -13,13 +14,18 @@ interface MusicaDao {
     @Insert
     suspend fun inserir(musica: Musica)
 
+    // Obter todas as músicas
     @Query("SELECT * FROM musicas")
-    suspend fun buscarTodos(): List<Musica>
+    fun listarMusicas(): LiveData<List<Musica>>
+
+    // Obter uma música específica pelo ID
+    @Query("SELECT * FROM musicas WHERE idMusica = :musicaId")
+    fun ListarMusicaPorId(musicaId: Int): LiveData<Musica>
 
     @Delete
-    suspend fun deletar(musica: Musica)
+    suspend fun deletarMusica(musica: Musica)
 
     @Update
-    suspend fun atualizar(musica: Musica)
+    suspend fun atualizarMusica(musica: Musica)
 
 }

@@ -1,8 +1,10 @@
 package com.example.musicwhisky1.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.example.musicwhisky1.model.Artista
@@ -10,19 +12,19 @@ import com.example.musicwhisky1.model.Artista
 @Dao
 interface ArtistaDao {
 
-    @Insert
-    suspend fun inserir(artista: Artista)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun inserirArtista(artista: Artista)
+
+    @Query("SELECT * FROM artistas WHERE idArtista = :idArtista")
+    fun buscarArtistaPorId(idArtista: Int): LiveData<Artista>
 
     @Query("SELECT * FROM artistas")
-    suspend fun buscarTodos(): List<Artista>
+    suspend fun buscarTodosArtista(): List<Artista>
 
     @Delete
-    suspend fun deletar(artista: Artista)
+    suspend fun deletarArtista(artista: Artista)
 
     @Update
-    suspend fun atualizar(artista: Artista)
-
-    @Query("SELECT COUNT(*) FROM artistas WHERE id = :id")
-    suspend fun verificarArtistaExiste(id: Int): Boolean
+    suspend fun atualizarArtista(artista: Artista)
 
 }

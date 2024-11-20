@@ -1,13 +1,14 @@
-package com.example.musicwhisky1.database
+package com.example.mvvm2.model.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.musicwhisky.Album
-import com.example.musicwhisky1.dao.ArtistaDao
-import com.example.musicwhisky1.dao.MusicaDao
-import com.example.musicwhisky1.dao.AlbumDao
+
+import com.example.musicwhisky.model.ArtistaDao
+import com.example.musicwhisky.model.MusicaDao
+import com.example.musicwhisky1.model.AlbumDao
 import com.example.musicwhisky1.model.Musica
 import com.example.musicwhisky1.model.Artista
 
