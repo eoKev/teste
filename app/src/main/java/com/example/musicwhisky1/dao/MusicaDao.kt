@@ -19,7 +19,7 @@ interface MusicaDao {
     fun listarMusicas(): LiveData<List<Musica>>
 
     // Obter uma música específica pelo ID
-    @Query("SELECT * FROM musicas WHERE idMusica = :musicaId")
+    @Query("SELECT * FROM musicas WHERE id = :musicaId")
     fun ListarMusicaPorId(musicaId: Int): LiveData<Musica>
 
     @Delete

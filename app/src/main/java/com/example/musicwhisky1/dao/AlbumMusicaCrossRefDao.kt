@@ -13,7 +13,7 @@ import com.example.musicwhisky1.model.AlbumComMusicas
 interface AlbumMusicaCrossRefDao {
     // listar as musicas de um album
     @Transaction
-    @Query("SELECT * FROM albuns WHERE idAlbum = :albumId")
+    @Query("SELECT * FROM albuns WHERE id = :albumId")
     fun obterAlbumComMusicas(albumId: Int): LiveData<AlbumComMusicas>
 
     // adicionar musicas a um album

@@ -15,7 +15,7 @@ interface ArtistaDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun inserirArtista(artista: Artista)
 
-    @Query("SELECT * FROM artistas WHERE idArtista = :idArtista")
+    @Query("SELECT * FROM artistas WHERE id = :idArtista")
     fun buscarArtistaPorId(idArtista: Int): LiveData<Artista>
 
     @Query("SELECT * FROM artistas")
