@@ -9,26 +9,26 @@ class AlbumRepository(private val albumDao: AlbumDao) {
 
     // Inserir ou atualizar um álbum
     suspend fun inserirAlbum(album: Album) {
-        albumDao.inserir(album)
+        albumDao.inserirAlbum(album)
     }
 
     // Atualizar um álbum
     suspend fun atualizarAlbum(album: Album) {
-        albumDao.atualizar(album)
+        albumDao.atualizarAlbum(album)
     }
 
     // Excluir um álbum
     suspend fun excluirAlbum(album: Album) {
-        albumDao.deletar(album)
+        albumDao.deletarAlbum(album)
     }
 
     // Buscar álbum por ID
     fun buscarAlbumPorId(idAlbum: Int): LiveData<Album> {
-        return albumDao.listarPorId(idAlbum)
+        return albumDao.listarAlbumPorId(idAlbum)
     }
 
     // Listar todos os álbuns
     fun listarAlbuns(): LiveData<List<Album>> {
-        return albumDao.listar()
+        return albumDao.listarAlbuns()
     }
 }
