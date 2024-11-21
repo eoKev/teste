@@ -23,7 +23,7 @@ interface AlbumDao {
     fun listarAlbuns(): LiveData<List<Album>>
 
     //Obeter um album especifico pelo Id
-    @Query("SELECT * FROM albuns WHERE idAlbum =:albumId")
+    @Query("SELECT * FROM albuns WHERE id =:albumId")
     fun listarAlbumPorId( albumId: Int): LiveData<Album>
 
     @Delete
