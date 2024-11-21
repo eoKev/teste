@@ -14,7 +14,7 @@ import com.example.musicwhisky1.model.AlbumComMusicas
 
 @Dao
 interface AlbumDao {
-
+    // Inserir Album
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun inserirAlbum(album: Album)
 
