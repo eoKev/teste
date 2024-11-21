@@ -20,7 +20,7 @@ interface AlbumDao {
 
     // Obter todos os álbuns
     @Query("SELECT * FROM albuns")
-    fun listar(): LiveData<List<Album>>
+    suspend fun buscarTodos(): List<Album>
 
     //Obeter um album especifico pelo Id
     @Query("SELECT * FROM albuns WHERE id =:albumId")

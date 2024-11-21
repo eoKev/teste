@@ -16,16 +16,16 @@ interface MusicaDao {
 
     // Obter todas as músicas
     @Query("SELECT * FROM musicas")
-    fun listarMusicas(): LiveData<List<Musica>>
+    suspend fun buscarTodos(): List<Musica>
 
     // Obter uma música específica pelo ID
     @Query("SELECT * FROM musicas WHERE id = :musicaId")
-    fun ListarMusicaPorId(musicaId: Int): LiveData<Musica>
+    fun ListarPorId(musicaId: Int): LiveData<Musica>
 
     @Delete
-    suspend fun deletarMusica(musica: Musica)
+    suspend fun deletar(musica: Musica)
 
     @Update
-    suspend fun atualizarMusica(musica: Musica)
+    suspend fun atualizar(musica: Musica)
 
 }
