@@ -1,4 +1,5 @@
 package com.example.musicwhisky
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
@@ -24,5 +25,6 @@ data class Album(
     val duracao: String,
     val dataLancamento: String,
     val genero: String,
+    @ColumnInfo(name = "idArtista")
     val idArtista: Int
 )
