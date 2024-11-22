@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun TelaCadastro(navController: NavController) {
@@ -23,11 +24,16 @@ fun TelaCadastro(navController: NavController) {
         // Botão para voltar para a tela inicial
         Button(
             onClick = {
-                navController.navigate("inicial") // Volta para a tela inicial
+                navController.navigate("inicial")
             },
-            modifier = Modifier.align(Alignment.CenterHorizontally) // Centraliza o botão
+            modifier = Modifier.align(Alignment.CenterHorizontally)
         ) {
             Text("Voltar para Tela Inicial")
         }
     }
+}
+
+@Composable
+fun PreviewTelaCadastro(){
+    TelaCadastro(navController = rememberNavController())
 }
