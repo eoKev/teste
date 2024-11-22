@@ -6,10 +6,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.example.musicwhisky1.ui.theme.Musicwhisky1Theme
-import com.example.musicwhisky1.view.TelaInicial
+import com.example.musicwhisky1.view.AppNavigation
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -17,14 +18,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Musicwhisky1Theme(darkTheme = true) {
-
                 val navController = rememberNavController()
-
-                // Exibe diretamente a TelaInicial
-                Scaffold(modifier = Modifier.fillMaxSize()) {
-                    TelaInicial(navController = navController)
-                }
+                    AppNavigation(navController = navController)
             }
         }
     }
 }
+

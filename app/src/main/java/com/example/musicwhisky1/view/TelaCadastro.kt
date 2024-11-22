@@ -18,13 +18,11 @@ fun TelaCadastro(navController: NavController) {
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        // Texto indicando que é a tela de cadastro
         Text("Tela de Cadastro", modifier = Modifier.align(Alignment.CenterHorizontally))
 
-        // Botão para voltar para a tela inicial
         Button(
             onClick = {
-                navController.navigate("inicial")
+                navController.navigate("home")
             },
             modifier = Modifier.align(Alignment.CenterHorizontally)
         ) {

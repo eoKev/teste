@@ -45,7 +45,6 @@ fun TelaInicial(navController: NavController) {
     }
 }
 
-
 @Preview(showBackground = true)
 @Composable
 fun PreviewTelaInicial() {
