@@ -17,7 +17,9 @@ fun TelaCadastro(navController: NavController) {
     var selectedOption by remember { mutableStateOf("Artista") }
 
     // Estados para armazenar os dados do formulário
-    var nome by remember { mutableStateOf("") }
+    var nomeArtista by remember { mutableStateOf("") }
+    var nomeAlbum by remember { mutableStateOf("") }
+    var nomeMusica by remember { mutableStateOf("") }
     var quantidadeMusicas by remember { mutableStateOf("") }
     var duracao by remember { mutableStateOf("") }
     var dataLancamento by remember { mutableStateOf("") }
@@ -61,16 +63,16 @@ fun TelaCadastro(navController: NavController) {
         when (selectedOption) {
             "Artista" -> {
                 TextField(
-                    value = nome,
-                    onValueChange = { nome = it },
+                    value = nomeArtista,
+                    onValueChange = { nomeArtista = it },
                     label = { Text("Nome do Artista ou Banda") },
                     modifier = Modifier.fillMaxWidth()
                 )
             }
             "Álbum" -> {
                 TextField(
-                    value = nome,
-                    onValueChange = { nome = it },
+                    value = nomeAlbum,
+                    onValueChange = { nomeAlbum = it },
                     label = { Text("Nome do Álbum") },
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -106,8 +108,8 @@ fun TelaCadastro(navController: NavController) {
             }
             "Música" -> {
                 TextField(
-                    value = nome,
-                    onValueChange = { nome = it },
+                    value = nomeMusica,
+                    onValueChange = { nomeMusica = it },
                     label = { Text("Nome da Música") },
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -144,13 +146,13 @@ fun TelaCadastro(navController: NavController) {
             onClick = {
                 when (selectedOption) {
                     "Artista" -> {
-                        println("Cadastrando Artista: Nome = $nome")
+                        println("Cadastrando Artista: Nome = $nomeArtista")
                     }
                     "Álbum" -> {
-                        println("Cadastrando Álbum: Nome = $nome, Artista = $artistaSelecionado")
+                        println("Cadastrando Álbum: Nome = $nomeAlbum, Artista = $artistaSelecionado")
                     }
                     "Música" -> {
-                        println("Cadastrando Música: Nome = $nome, Artista = $artistaSelecionado, Álbum = $albumSelecionado")
+                        println("Cadastrando Música: Nome = $nomeMusica, Artista = $artistaSelecionado, Álbum = $albumSelecionado")
                     }
                 }
             },

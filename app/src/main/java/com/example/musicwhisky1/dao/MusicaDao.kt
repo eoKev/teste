@@ -6,6 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.example.musicwhisky.Album
 import com.example.musicwhisky1.model.Musica
 
 @Dao
@@ -21,6 +22,9 @@ interface MusicaDao {
     // Obter uma música específica pelo ID
     @Query("SELECT * FROM musicas WHERE id = :musicaId")
     fun ListarPorId(musicaId: Int): LiveData<Musica>
+
+    @Query("SELECT * FROM musicas WHERE nome LIKE '%' || :nome || '%'")
+    fun buscarPorNome(nome: String): LiveData<List<Musica>>
 
     @Delete
     suspend fun deletar(musica: Musica)
