@@ -2,21 +2,64 @@ package com.example.musicwhisky1.view
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.room.Room
+import com.example.musicwhisky1.dao.AlbumDao
+import com.example.musicwhisky1.dao.ArtistaDao
+import com.example.musicwhisky1.dao.MusicaDao
 import com.example.musicwhisky1.view.TelaInicial
 import com.example.musicwhisky1.view.TelaCadastro
+import com.example.musicwhisky1.viewmodel.AlbumVMFactory
+import com.example.musicwhisky1.viewmodel.ArtistaVMFactory
+import com.example.musicwhisky1.viewmodel.MusicaVMFactory
+import com.example.mvvm2.model.database.AppDB
+import com.example.mvvm2.viewmodel.AlbumVM
+import com.example.mvvm2.viewmodel.ArtistaVM
+import com.example.mvvm2.viewmodel.MusicaVM
+
 
 @Composable
-fun AppNavigation(navController: NavHostController) {
-    NavHost(
-        navController = navController,
-        startDestination = "home"
-    ) {
-        composable("home") { TelaInicial(navController) }
-        composable("cadastro") { TelaCadastro(navController) }
+fun AppNavigation(
+    navController: NavHostController,
+    artistaDao: ArtistaDao,
+    albumDao: AlbumDao,
+    musicaDao: MusicaDao
+) {
+    NavHost(navController = navController, startDestination = "home") {
+
+        // Tela inicial
+        composable("home") {
+            TelaInicial(navController)
+        }
+
+        // Tela de cadastro de artista
+        composable("cadastroArtista") {
+            val artistaFactory = ArtistaVMFactory(artistaDao)
+            val artistaVM: ArtistaVM = viewModel(factory = artistaFactory)
+            TelaCadastroArtista(navController, artistaVM)
+        }
+
+        // Tela de cadastro de álbum
+        composable("cadastroAlbum") {
+            val albumFactory = AlbumVMFactory(albumDao)
+            val albumVM: AlbumVM = viewModel(factory = albumFactory)
+            TelaCadastroAlbum(navController, albumVM)
+        }
+
+        composable("cadastro") {
+            TelaCadastro(navController)
+        }
+
+        // Tela de cadastro de música
+        composable("cadastroMusica") {
+            val musicaFactory = MusicaVMFactory(musicaDao)
+            val musicaVM: MusicaVM = viewModel(factory = musicaFactory)
+            TelaCadastroMusica(navController, musicaVM)
+        }
     }
 }
-
