@@ -13,7 +13,6 @@ import com.example.musicwhisky1.ui.theme.Musicwhisky1Theme
 import com.example.musicwhisky1.view.AppNavigation
 
 class MainActivity : ComponentActivity() {
-    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

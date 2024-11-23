@@ -22,7 +22,6 @@ data class Album(
     val id: Int = 0,
     val nome: String,
     val quantidadeMusicas: Int = 0,
-    val duracao: String,
     val dataLancamento: String,
     val genero: String,
     @ColumnInfo(name = "idArtista")

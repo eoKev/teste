@@ -27,7 +27,7 @@ class AlbumVM(private val albumDao: AlbumDao) : ViewModel() {
             return "Preencha todos os campos!"
         }
 
-        val album = Album(id = 0, nome = nomeAlbum, quantidadeMusicas = quantidadeMusicas, duracao = duracao, dataLancamento = dataLancamento, genero = genero, idArtista = idArtista
+        val album = Album(id = 0, nome = nomeAlbum, quantidadeMusicas = quantidadeMusicas, dataLancamento = dataLancamento, genero = genero, idArtista = idArtista
         )
         viewModelScope.launch {
             albumDao.inserir(album)
@@ -50,7 +50,7 @@ class AlbumVM(private val albumDao: AlbumDao) : ViewModel() {
         }
 
         val album = listaAlbuns.value.find { it.id == id } ?: return "Erro ao atualizar álbum!"
-        val albumAtualizado = album.copy(nome = nome, quantidadeMusicas = quantidadeMusicas, duracao = duracao, dataLancamento = dataLancamento, genero = genero, idArtista = idArtista)
+        val albumAtualizado = album.copy(nome = nome, quantidadeMusicas = quantidadeMusicas, dataLancamento = dataLancamento, genero = genero, idArtista = idArtista)
 
         viewModelScope.launch {
             albumDao.atualizar(albumAtualizado)
