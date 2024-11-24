@@ -12,17 +12,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
-
+val CustomFontColor = Color(249, 253, 218)
 
 private val DarkColorScheme = darkColorScheme(
     primary = Color(red = 242, green = 5, blue = 92),
     secondary = Color(0xFF03DAC5),
     background = Color(red = 1, green = 3, blue = 38),
-    surface = Color(0xFF121212),
+    surface = Color(242, 5, 68),
     onPrimary = Color(242, 240, 213),
     onSecondary = Color.White,
     onBackground = Color.White,
-    onSurface = Color.White
+    onSurface = Color(248, 244, 215)
 )
 
 private val LightColorScheme = lightColorScheme(
