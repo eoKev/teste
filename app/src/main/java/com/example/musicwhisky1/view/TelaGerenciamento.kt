@@ -14,56 +14,53 @@ import com.example.musicwhisky1.ui.HomeIcon
 import com.example.musicwhisky1.ui.SearchBar
 
 @Composable
-fun TelaCadastro(navController: NavController) {
+fun TelaGerenciamento(navController: NavController) {
     var query by remember { mutableStateOf("") }
 
-        HomeIcon(onClick = { navController.navigate("home") }, iconSize = 32)
+    HomeIcon(onClick = { navController.navigate("home") }, iconSize = 32)
 
-        SearchBar(
-            query = query,
-            onQueryChange = { newQuery -> query = newQuery }
-        )
+    SearchBar(
+        query = query,
+        onQueryChange = { newQuery -> query = newQuery }
+    )
 
-        Spacer(modifier = Modifier.height(16.dp)) // Espaço entre a barra de pesquisa e os botões
+    Spacer(modifier = Modifier.height(16.dp)) // Espaço entre a barra de pesquisa e os botões
 
 
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Button(
+            onClick = { navController.navigate("gerenciamentoArtista") },
+            modifier = Modifier
+                .fillMaxWidth(0.8f) // Botão ocupa 80% da largura
+                .padding(vertical = 8.dp) // Espaçamento vertical entre botões
         ) {
-            Button(
-                onClick = { navController.navigate("cadastroArtista") },
-                modifier = Modifier
-                    .fillMaxWidth(0.8f) // Botão ocupa 80% da largura
-                    .padding(vertical = 8.dp) // Espaçamento vertical entre botões
-            ) {
-                Text("Artista")
-            }
-            Button(
-                onClick = { navController.navigate("cadastroAlbum") },
-                modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .padding(vertical = 8.dp)
-            ) {
-                Text("Álbum")
-            }
-            Button(
-                onClick = { navController.navigate("cadastroMusica") },
-                modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .padding(vertical = 8.dp)
-            ) {
-                Text("Música")
-            }
+            Text("Artista")
         }
+        Button(
+            onClick = { navController.navigate("gerenciamentoAlbum") },
+            modifier = Modifier
+                .fillMaxWidth(0.8f)
+                .padding(vertical = 8.dp)
+        ) {
+            Text("Álbum")
+        }
+        Button(
+            onClick = { navController.navigate("gerenciamentoMusica") },
+            modifier = Modifier
+                .fillMaxWidth(0.8f)
+                .padding(vertical = 8.dp)
+        ) {
+            Text("Música")
+        }
+    }
 }
-
-
 
 @Preview(showBackground = true)
 @Composable
 fun PreviewTelaCadastro() {
-
-    TelaCadastro(navController = rememberNavController())
+    TelaGerenciamento(navController = rememberNavController())
 }
