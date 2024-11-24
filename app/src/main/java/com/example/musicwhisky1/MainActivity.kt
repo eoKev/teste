@@ -11,16 +11,28 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.example.musicwhisky1.ui.theme.Musicwhisky1Theme
 import com.example.musicwhisky1.view.AppNavigation
+import com.example.mvvm2.model.database.AppDB
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val database = AppDB.getDatabase(applicationContext)
+        val artistaDao = database.artistaDao()
+        val albumDao = database.albumDao()
+        val musicaDao = database.musicaDao()
+
         setContent {
-            Musicwhisky1Theme(darkTheme = true) {
+            Musicwhisky1Theme (darkTheme = true){
                 val navController = rememberNavController()
-                    AppNavigation(navController = navController)
+
+                AppNavigation(
+                    navController = navController,
+                    artistaDao = artistaDao,
+                    albumDao = albumDao,
+                    musicaDao = musicaDao
+                )
             }
         }
     }
 }
-
