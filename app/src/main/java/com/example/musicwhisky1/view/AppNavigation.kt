@@ -13,7 +13,7 @@ import com.example.musicwhisky1.dao.AlbumDao
 import com.example.musicwhisky1.dao.ArtistaDao
 import com.example.musicwhisky1.dao.MusicaDao
 import com.example.musicwhisky1.view.TelaInicial
-import com.example.musicwhisky1.view.TelaCadastro
+import com.example.musicwhisky1.view.TelaGerenciamento
 import com.example.musicwhisky1.viewmodel.AlbumVMFactory
 import com.example.musicwhisky1.viewmodel.ArtistaVMFactory
 import com.example.musicwhisky1.viewmodel.MusicaVMFactory
@@ -38,28 +38,43 @@ fun AppNavigation(
         }
 
         // Tela de cadastro de artista
-        composable("cadastroArtista") {
+        composable("gerenciamentoArtista") {
             val artistaFactory = ArtistaVMFactory(artistaDao)
             val artistaVM: ArtistaVM = viewModel(factory = artistaFactory)
-            TelaCadastroArtista(navController, artistaVM)
+            TelaGerenciamentoArtista(navController, artistaVM)
         }
 
         // Tela de cadastro de álbum
-        composable("cadastroAlbum") {
-            val albumFactory = AlbumVMFactory(albumDao)
+        composable("gerenciamentoAlbum") {
+            val albumFactory = AlbumVMFactory(albumDao, artistaDao)
             val albumVM: AlbumVM = viewModel(factory = albumFactory)
-            TelaCadastroAlbum(navController, albumVM)
+
+            // Instanciando o ArtistaVM diretamente
+            val artistaFactory = ArtistaVMFactory(artistaDao)
+            val artistaVM: ArtistaVM = viewModel(factory = artistaFactory)
+
+            TelaGerenciamentoAlbum(navController, albumVM, artistaVM)
         }
 
-        composable("cadastro") {
-            TelaCadastro(navController)
+        // Tela de gerenciamento geral
+        composable("gerenciamento") {
+            TelaGerenciamento(navController)
         }
 
         // Tela de cadastro de música
-        composable("cadastroMusica") {
-            val musicaFactory = MusicaVMFactory(musicaDao)
+        composable("gerenciamentoMusica") {
+            val albumFactory = AlbumVMFactory(albumDao, artistaDao)
+            val albumVM: AlbumVM = viewModel(factory = albumFactory)
+
+            val artistaFactory = ArtistaVMFactory(artistaDao)
+            val artistaVM: ArtistaVM = viewModel(factory = artistaFactory)
+
+            val musicaFactory = MusicaVMFactory(musicaDao, albumDao, artistaDao)
             val musicaVM: MusicaVM = viewModel(factory = musicaFactory)
-            TelaCadastroMusica(navController, musicaVM)
+
+            TelaGerenciamentoMusica(navController, musicaVM, artistaVM, albumVM)
         }
     }
 }
+
+

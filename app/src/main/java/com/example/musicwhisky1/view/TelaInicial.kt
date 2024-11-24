@@ -33,13 +33,13 @@ fun TelaInicial(navController: NavController) {
 
         Button(
             onClick = {
-                navController.navigate("cadastro")
+                navController.navigate("gerenciamento")
             },
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
                 .padding(bottom = 32.dp),
         ) {
-            Text("Ir para Cadastro")
+            Text("Ir para gerenciamento")
         }
 
     }
