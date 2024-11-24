@@ -11,6 +11,7 @@ import androidx.room.Update
 import com.example.app.entidades.AlbumMusicaCrossRef
 import com.example.musicwhisky.Album
 import com.example.musicwhisky1.model.AlbumComMusicas
+import com.example.musicwhisky1.model.Artista
 
 @Dao
 interface AlbumDao {
@@ -31,8 +32,14 @@ interface AlbumDao {
 
     @Update
     suspend fun atualizar(album: Album)
+    @Transaction
+    @Query("SELECT * FROM albuns")
+    fun listarAlbumComMusicas() : List<AlbumComMusicas>
 
+    @Query("SELECT * FROM albuns WHERE id = :id")
+    fun buscarPorId(id: Int): LiveData<Album>
 
-
+    @Query("SELECT * FROM albuns WHERE nome LIKE '%' || :nome || '%'")
+    fun buscarPorNome(nome: String): LiveData<List<Album>>
 
 }

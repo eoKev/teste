@@ -8,6 +8,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.example.musicwhisky1.model.Artista
+import com.example.musicwhisky1.model.Musica
 
 @Dao
 interface ArtistaDao {
@@ -26,5 +27,9 @@ interface ArtistaDao {
 
     @Update
     suspend fun atualizar(artista: Artista)
+
+    @Query("SELECT * FROM artistas WHERE nome LIKE '%' || :nome || '%'")
+    fun buscarPorNome(nome: String): LiveData<List<Artista>>
+
 
 }

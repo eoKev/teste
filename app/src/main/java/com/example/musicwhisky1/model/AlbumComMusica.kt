@@ -9,9 +9,8 @@ import com.example.musicwhisky.Album
 data class AlbumComMusicas(
     @Embedded val album: Album,
     @Relation(
-        parentColumn = "idAlbum",
-        entityColumn = "idMusica",
-        associateBy = Junction(AlbumMusicaCrossRef::class)
+        parentColumn = "id",
+        entityColumn = "idAlbum"
     )
     val musicas: List<Musica>
 )
