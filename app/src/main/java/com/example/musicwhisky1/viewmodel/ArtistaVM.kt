@@ -59,35 +59,43 @@ class ArtistaVM(private val artistaDao: ArtistaDao) : ViewModel() {
         }
     }
 
-    fun atualizar(id: Int, nome: String, context: Context) {
-        if (nome.isBlank()) {
+    fun atualizar(nome: String, nomeNovo: String, context: Context) {
+
+        if (nomeNovo.isBlank()) {
             exibirToast(context, "Preencha todos os campos!")
             return
         }
 
-        val artistaExistente = buscarPorNome(nome)
-        if (artistaExistente != null && artistaExistente.id != id) {
+        // Verifica se já existe um artista com o novo nome
+        val artistaExistente = buscarPorNome(nomeNovo)
+        if (artistaExistente != null && artistaExistente.nome != nome) {
             exibirToast(context, "Já existe um artista com este nome!")
             return
         }
 
-        val artista = listar.value.find { it.id == id }
+        // Busca o artista pelo nome antigo (nomeArtista)
+        val artista = buscarPorNome(nome)
         if (artista == null) {
-            exibirToast(context, "Artista não encontrado para atualizar!")
+            exibirToast(context, "Artista não encontrado, verifique o nome!")
             return
         }
 
-        val artistaAtualizado = artista.copy(nome = nome)
+        // Cria uma nova instância de Artista com o novo nome
+        val artistaAtualizado = artista.copy(nome = nomeNovo)
 
+        // Atualiza o artista no banco de dados
         viewModelScope.launch {
             artistaDao.atualizar(artistaAtualizado)
-            carregar()
+            carregar()  // Recarrega a lista de artistas
             exibirToast(context, "Artista atualizado com sucesso!")
         }
     }
-
     fun buscarPorNome(nome: String): Artista? {
         return listar.value.find { it.nome.equals(nome, ignoreCase = true) }
+    }
+
+    fun buscarPorId(id: Int): Artista? {
+        return listar.value.find { it.id == id }
     }
 
     private fun exibirToast(context: Context, mensagem: String) {
