@@ -11,25 +11,27 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import okio.blackholeSink
 
-val CustomFontColor = Color(249, 253, 218)
+val CustomFontColor = Color(255, 255, 255, 255)
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Color(red = 242, green = 5, blue = 92),
-    secondary = Color(0xFF03DAC5),
+    primary = Color(242, 5, 80, 255),
+    secondary = Color(0xFF13DAC6),
     background = Color(red = 1, green = 3, blue = 38),
-    surface = Color(242, 5, 68),
+    surface = Color(red = 68, green = 3, blue = 35, alpha = 226),
     onPrimary = Color(242, 240, 213),
     onSecondary = Color.White,
     onBackground = Color.White,
-    onSurface = Color(248, 244, 215)
+    onSurface = Color(248, 244, 215),
+    onTertiary = Color.White,
+
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = Purple40,
     secondary = PurpleGrey40,
     tertiary = Pink40
-
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),

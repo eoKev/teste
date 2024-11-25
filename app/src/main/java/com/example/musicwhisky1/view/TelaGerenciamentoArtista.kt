@@ -10,10 +10,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CardElevation
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -51,7 +53,8 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
         Text(
             text = "Cadastrar Artista",
             style = MaterialTheme.typography.titleLarge,
-            modifier = Modifier.padding(bottom = 16.dp)
+            modifier = Modifier.padding(bottom = 16.dp),
+            color = MaterialTheme.colorScheme.primary
         )
 
         TextField(
@@ -121,7 +124,8 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                                 message = "Artista não encontrado para atualização!",
                                 onConfirm = { dialogState = null },
                                 onDismiss = { dialogState = null },
-                                okOnly = true
+                                okOnly = true,
+
                             )
                         }
                     } else {
@@ -207,7 +211,7 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                items(artists.chunked(2)) { artistRow ->
+                items(artists.chunked(1)) { artistRow ->
                     Row(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.fillMaxWidth()
@@ -216,19 +220,26 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                             Card(
                                 modifier = Modifier
                                     .weight(1f)
+                                    .padding(start = 80.dp)
+                                    .padding(end = 80.dp)
                                     .clickable { /* Clique no artista */ },
-                            ) {
+                                colors = CardDefaults.cardColors(
+                                    containerColor = MaterialTheme.colorScheme.background)
+                                ) {
                                 Column(
+
                                     modifier = Modifier
                                         .fillMaxSize()
                                         .background(MaterialTheme.colorScheme.surface)
                                         .padding(16.dp),
+
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center
                                 ) {
                                     Text(
                                         text = artista.nome,
-                                        style = MaterialTheme.typography.titleMedium
+                                        style = MaterialTheme.typography.titleMedium,
+                                        color = MaterialTheme.colorScheme.onTertiary
                                     )
                                 }
                             }

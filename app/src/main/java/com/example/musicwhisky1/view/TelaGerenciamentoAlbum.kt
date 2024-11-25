@@ -1,6 +1,8 @@
 package com.example.musicwhisky1.view
 
 import android.widget.Toast
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,6 +14,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -23,6 +27,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.musicwhisky1.ui.*
@@ -43,13 +51,14 @@ fun TelaGerenciamentoAlbum(navController: NavController, albumVM: AlbumVM, artis
 
     // Layout da tela
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = "Cadastrar Álbum",
             style = MaterialTheme.typography.titleLarge,
-            modifier = Modifier.padding(bottom = 16.dp)
+            modifier = Modifier.padding(bottom = 16.dp),
+            color = MaterialTheme.colorScheme.primary
         )
 
         // Campos de entrada
@@ -221,16 +230,55 @@ fun TelaGerenciamentoAlbum(navController: NavController, albumVM: AlbumVM, artis
             Spacer(modifier = Modifier.height(16.dp))
 
             LazyColumn(
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                items(albums) { album ->
-                    val artistaNome = artistaVM.buscarPorId(album.idArtista)?.nome ?: "Desconhecido"
-                    Text(
-                        text = "${album.nome} - Artista: $artistaNome",
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(8.dp)
-                    )
+                items(albums.chunked(1)) { albumRow ->
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        albumRow.forEach { albums ->
+                            Card(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .padding(start = 80.dp)
+                                    .padding(end = 80.dp)
+                                    .clickable { /* Clique no artista */ },
+                                colors = CardDefaults.cardColors(
+                                    containerColor = MaterialTheme.colorScheme.background
+                                )
+                            ) {
+                                Column (
+
+                                    modifier = Modifier
+                                        .fillMaxSize()
+                                        .background(MaterialTheme.colorScheme.surface)
+                                        .padding(10.dp),
+
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center
+                                ){
+                                    val artistaNome =
+                                        artistaVM.buscarPorId(albums.idArtista)?.nome
+                                            ?: "Desconhecido"
+                                    Text(
+                                        text = buildAnnotatedString {
+                                            withStyle(style = SpanStyle(fontSize = MaterialTheme.typography.headlineMedium.fontSize)) {
+                                                append("${albums.nome}\n")
+                                            }
+                                            withStyle(style = SpanStyle(fontSize = MaterialTheme.typography.bodySmall.fontSize)) {
+                                                append("Artista: $artistaNome")
+                                            }
+                                        },
+                                        color = MaterialTheme.colorScheme.onTertiary,
+                                        textAlign = TextAlign.Center, // Centraliza todo o texto dentro do componente
+                                        modifier = Modifier.fillMaxWidth() // Garante que o texto ocupe toda a largura disponível
+                                    )
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

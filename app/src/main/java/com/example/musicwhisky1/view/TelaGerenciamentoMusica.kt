@@ -1,5 +1,6 @@
 package com.example.musicwhisky1.view
 import android.widget.Toast
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -13,6 +14,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.MaterialTheme
@@ -26,10 +29,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.musicwhisky1.model.Artista
+import com.example.musicwhisky1.model.Musica
 import com.example.musicwhisky1.ui.ConfirmDialog
 import com.example.musicwhisky1.ui.DialogState
 import com.example.mvvm2.viewmodel.AlbumVM
@@ -55,6 +64,8 @@ fun TelaGerenciamentoMusica(
     val albunsList = albumVM.listar.value // Lista de álbuns
     val musicaList = musicaVM.listar.value
 
+
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -64,7 +75,8 @@ fun TelaGerenciamentoMusica(
         Text(
             text = "Cadastrar Música",
             style = MaterialTheme.typography.titleLarge,
-            modifier = Modifier.padding(bottom = 16.dp)
+            modifier = Modifier.padding(bottom = 16.dp),
+            color = MaterialTheme.colorScheme.primary
         )
 
         // Campo para o nome da música
@@ -83,7 +95,9 @@ fun TelaGerenciamentoMusica(
             onValueChange = { nomeArtista = it },
             label = { Text("Artista") },
             modifier = Modifier.fillMaxWidth()
+
         )
+
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -241,14 +255,51 @@ fun TelaGerenciamentoMusica(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                // Exibe apenas as últimas 5 músicas cadastradas
-                items(musicaList.takeLast(5)) { musica ->
-                    Text(
-                        text = musica.nome,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(8.dp)
-                    )
+                items(musicaList.chunked(1)) { musicRow ->
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        musicRow.forEach { musica ->
+                            Card(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .padding(start = 80.dp)
+                                    .padding(end = 80.dp)
+                                    .clickable { /* Clique no artista */ },
+                                colors = CardDefaults.cardColors(
+                                    containerColor = MaterialTheme.colorScheme.background)
+                            ) {
+                                Column(
+
+                                    modifier = Modifier
+                                        .fillMaxSize()
+                                        .background(MaterialTheme.colorScheme.surface)
+                                        .padding(16.dp),
+
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center
+                                ) {
+                                    val artistaNome =
+                                        artistaVM.buscarPorId(musica.idArtista)?.nome
+                                            ?: "Desconhecido"
+                                    Text(
+                                        text = buildAnnotatedString {
+                                            withStyle(style = SpanStyle(fontSize = MaterialTheme.typography.headlineMedium.fontSize)) {
+                                                append("${musica.nome}\n")
+                                            }
+                                            withStyle(style = SpanStyle(fontSize = MaterialTheme.typography.bodySmall.fontSize)) {
+                                                append(artistaNome)
+                                            }
+                                        },
+                                        color = MaterialTheme.colorScheme.onTertiary,
+                                         // Centraliza todo o texto dentro do componente
+                                        modifier = Modifier.fillMaxWidth() // Garante que o texto ocupe toda a largura disponível
+                                    )
+                               }
+                            }
+                        }
+                    }
                 }
             }
         }
