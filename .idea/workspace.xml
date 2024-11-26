@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7b3fde1d-fe24-4853-ae7e-25d0132dfbc8" name="Changes" comment="libs.versions incluso">
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/musicwhisky1/view/TelaCadastro.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\kevin\.android\avd\Medium_Phone_API_35.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Musicwhisky1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Musicwhisky1" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Musicwhisky1" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Musicwhisky1" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\kevin\My Documents\key.jks" />
+    <option name="KEY_ALIAS" value="key" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;eoKev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/eoKev/Musicwhisky.git&quot;,
+    &quot;accountId&quot;: &quot;208d7279-358d-4418-8d3d-e8a5ab57a1ff&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2p8WdZdIoJKdEnCAbICKt57epTy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.TelaCadastro.executor&quot;: &quot;Run&quot;,
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;ApkExportedModule&quot;: &quot;Musicwhisky1.app&quot;,
+    &quot;Compose Preview.PreviewTelaCadastro.executor&quot;: &quot;Run&quot;,
+    &quot;ExportApk.ApkPathForMusicwhisky1.app&quot;: &quot;C:\\Users\\kevin\\AndroidStudioProjects\\Musicwhisky3\\app&quot;,
+    &quot;PROJECT_TRUSTED_KEY&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kevin/Downloads/Musicwhisky-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ExportApk.BuildVariants&quot;: [
+      &quot;release&quot;
+    ],
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;C:\\Users\\kevin\\.gradle&quot;
+    ]
+  }
+}</component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kevin\AndroidStudioProjects\Musicwhisky3\app\src\main\java\com\example\musicwhisky1" />
+      <recent name="C:\Users\kevin\AndroidStudioProjects\Musicwhisky3\app" />
+      <recent name="C:\Users\kevin\AndroidStudioProjects\Musicwhisky3\app\src\main\java\com\example\musicwhisky1\api" />
+      <recent name="C:\Users\kevin\AndroidStudioProjects\Musicwhisky3\app\src\main\java\com\example\musicwhisky1.api" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.musicwhisky1.viewmodel" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="TelaCadastro" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="Musicwhisky1.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.musicwhisky1.view.TelaCadastro" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Musicwhisky1.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PreviewTelaCadastro" type="ComposePreviewRunConfiguration" temporary="true">
+      <module name="Musicwhisky1.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="--es composable com.example.musicwhisky1.view.TelaGerenciamentoKt.PreviewTelaCadastro" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="androidx.compose.ui.tooling.PreviewActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <compose-preview-run-configuration composable-fqn="com.example.musicwhisky1.view.TelaGerenciamentoKt.PreviewTelaCadastro" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Compose Preview.PreviewTelaCadastro" />
+        <item itemvalue="Android App.TelaCadastro" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b3fde1d-fe24-4853-ae7e-25d0132dfbc8" name="Changes" comment="" />
+      <created>1732148270764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732148270764</updated>
+    </task>
+    <task id="LOCAL-00001" summary="correções nos metodos de album e artistadao">
+      <option name="closed" value="true" />
+      <created>1732148679497</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732148679497</updated>
+    </task>
+    <task id="LOCAL-00002" summary="correção nas funcoes do albumdao">
+      <option name="closed" value="true" />
+      <created>1732148767785</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732148767785</updated>
+    </task>
+    <task id="LOCAL-00003" summary="correção nas funções das daos">
+      <option name="closed" value="true" />
+      <created>1732148983602</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732148983602</updated>
+    </task>
+    <task id="LOCAL-00004" summary="correção dos imports nas viewmodels e appdb">
+      <option name="closed" value="true" />
+      <created>1732150351332</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732150351332</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adicionado material3 nas dependencias, criadas as classes de telas e mudança da cor do background do app">
+      <option name="closed" value="true" />
+      <created>1732315065203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732315065203</updated>
+    </task>
+    <task id="LOCAL-00006" summary="tela de cadastro e barra de pesquisa adicionados">
+      <option name="closed" value="true" />
+      <created>1732315157365</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732315157365</updated>
+    </task>
+    <task id="LOCAL-00007" summary="correção">
+      <option name="closed" value="true" />
+      <created>1732316059039</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732316059039</updated>
+    </task>
+    <task id="LOCAL-00008" summary="adição do appnavigation">
+      <option name="closed" value="true" />
+      <created>1732316082545</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732316082545</updated>
+    </task>
+    <task id="LOCAL-00009" summary="correção da navegação entre telas">
+      <option name="closed" value="true" />
+      <created>1732318484087</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732318484087</updated>
+    </task>
+    <task id="LOCAL-00010" summary="melhoria na tela cadastro e correções na classe e viewmodel do album">
+      <option name="closed" value="true" />
+      <created>1732322157026</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732322157026</updated>
+    </task>
+    <task id="LOCAL-00011" summary="correção do appnavigation">
+      <option name="closed" value="true" />
+      <created>1732403878012</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732403878012</updated>
+    </task>
+    <task id="LOCAL-00012" summary="mudança da tela de cadastro para tela de gerenciamento e correção dos métodos CRUD da tela de gerenciamento de artista">
+      <option name="closed" value="true" />
+      <created>1732403966586</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732403966586</updated>
+    </task>
+    <task id="LOCAL-00013" summary="correção da viewmodel do Artista para fazer vericações e exibir toast">
+      <option name="closed" value="true" />
+      <created>1732404108876</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732404108876</updated>
+    </task>
+    <task id="LOCAL-00014" summary="criação das classes confirmacao e homeicon para criar dialogboxes de confirmação e home para criar um icone que volte para tela inicial">
+      <option name="closed" value="true" />
+      <created>1732404436076</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732404436076</updated>
+    </task>
+    <task id="LOCAL-00015" summary="correção das telas de gerenciamento para fazer as operações CRUD">
+      <option name="closed" value="true" />
+      <created>1732489583901</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732489583901</updated>
+    </task>
+    <task id="LOCAL-00016" summary="correção das viewmodels para salvar corretamente as relações do banco de dados">
+      <option name="closed" value="true" />
+      <created>1732489848886</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732489848886</updated>
+    </task>
+    <task id="LOCAL-00017" summary="criação das dataclasses de relacionamento e dos metodos daos">
+      <option name="closed" value="true" />
+      <created>1732489925057</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732489925057</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ajuste na versao do database">
+      <option name="closed" value="true" />
+      <created>1732489954021</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732489954021</updated>
+    </task>
+    <task id="LOCAL-00019" summary="correção do appnavigation para instanciar corretamente as classes daos">
+      <option name="closed" value="true" />
+      <created>1732489995905</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732489995905</updated>
+    </task>
+    <task id="LOCAL-00020" summary="correção na mainactiviy">
+      <option name="closed" value="true" />
+      <created>1732491040689</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732491040689</updated>
+    </task>
+    <task id="LOCAL-00021" summary="correção na classe musica">
+      <option name="closed" value="true" />
+      <created>1732491262965</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732491262965</updated>
+    </task>
+    <task id="LOCAL-00022" summary="mudança no tema">
+      <option name="closed" value="true" />
+      <created>1732491492271</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732491492271</updated>
+    </task>
+    <task id="LOCAL-00023" summary="correção na tela de gereciamento de artista onde a opção de atualizar não estava sendo exibida corretamente">
+      <option name="closed" value="true" />
+      <created>1732634295799</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732634295799</updated>
+    </task>
+    <task id="LOCAL-00024" summary="alteração no appnavigation para implementar a tela de exibição de consulta de playlists da api do spotify">
+      <option name="closed" value="true" />
+      <created>1732637035565</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637035565</updated>
+    </task>
+    <task id="LOCAL-00025" summary="correção nas funções de salvar da tela de gerenciamento de album e de artista. Feita mudança para exibir lista mais detalhadas (exibir todas as informações da música e album)">
+      <option name="closed" value="true" />
+      <created>1732637113779</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637113779</updated>
+    </task>
+    <task id="LOCAL-00026" summary="atualização na classe searchbar e criação da artistadialog para retornar busca de nomes de artistas feitas pela api">
+      <option name="closed" value="true" />
+      <created>1732637210456</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637210456</updated>
+    </task>
+    <task id="LOCAL-00027" summary="atualização na classe searchbar e criação da artistadialog para retornar busca de nomes de artistas feitas pela api">
+      <option name="closed" value="true" />
+      <created>1732637258237</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637258237</updated>
+    </task>
+    <task id="LOCAL-00028" summary="adição da função de buscar por ID na classe albumDao e correções nas outras daos">
+      <option name="closed" value="true" />
+      <created>1732637327382</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637327382</updated>
+    </task>
+    <task id="LOCAL-00029" summary="mudança na versão do appdatabase para limpar o banco de dados">
+      <option name="closed" value="true" />
+      <created>1732637375337</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637375337</updated>
+    </task>
+    <task id="LOCAL-00030" summary="atualização da main para instanciar o spotifyviewmodel">
+      <option name="closed" value="true" />
+      <created>1732637526038</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637526038</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Criação do Retrofit para fazer a comunicação com api do spotify e criação da classe SpotifyApi(service) para fazer conexão com os endpoints">
+      <option name="closed" value="true" />
+      <created>1732637956840</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637956840</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Criação do Retrofit para fazer a comunicação com api do spotify e criação da classe SpotifyApi(service) para fazer conexão com os endpoints">
+      <option name="closed" value="true" />
+      <created>1732637968158</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637968158</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Criação do SpotifyAuth para fazer a autenticação do token de acesso á API do Spotify. Criada a classe SpotifyApiClient responsável para para fazer as requisições para os endpoints">
+      <option name="closed" value="true" />
+      <created>1732638108105</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1732638108105</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Criação da SpotifyVM para fazer a intermediação da api com a interface. Criação do SpotifyVMFactory">
+      <option name="closed" value="true" />
+      <created>1732638412972</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1732638412972</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Criação das classes AlbumsResponse, PlaylistResponse, SearchResponse, para mapear as respostas da api">
+      <option name="closed" value="true" />
+      <created>1732638740553</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1732638740553</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Criação da PlaylistDetailsScreen para exibir as músicas das playlists obtidas através da API">
+      <option name="closed" value="true" />
+      <created>1732638801141</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1732638801141</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Import da dependencia do coil compose para exibir a imagem das playlists">
+      <option name="closed" value="true" />
+      <created>1732639897471</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1732639897471</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Correção das viewmodels de Album e Artista">
+      <option name="closed" value="true" />
+      <created>1732641503375</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1732641503376</updated>
+    </task>
+    <task id="LOCAL-00039" summary="libs.versions incluso">
+      <option name="closed" value="true" />
+      <created>1732643263632</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1732643263632</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="correção da viewmodel do Artista para fazer vericações e exibir toast" />
+    <MESSAGE value="criação das classes confirmacao e homeicon para criar dialogboxes de confirmação e home para criar um icone que volte para tela inicial" />
+    <MESSAGE value="correção das telas de gerenciamento para fazer as operações CRUD" />
+    <MESSAGE value="correção das viewmodels para salvar corretamente as relações do banco de dados" />
+    <MESSAGE value="criação das dataclasses de relacionamento e dos metodos daos" />
+    <MESSAGE value="ajuste na versao do database" />
+    <MESSAGE value="correção do appnavigation para instanciar corretamente as classes daos" />
+    <MESSAGE value="correção na mainactiviy" />
+    <MESSAGE value="correção na classe musica" />
+    <MESSAGE value="mudança no tema" />
+    <MESSAGE value="correção na tela de gereciamento de artista onde a opção de atualizar não estava sendo exibida corretamente" />
+    <MESSAGE value="alteração no appnavigation para implementar a tela de exibição de consulta de playlists da api do spotify" />
+    <MESSAGE value="correção nas funções de salvar da tela de gerenciamento de album e de artista. Feita mudança para exibir lista mais detalhadas (exibir todas as informações da música e album)" />
+    <MESSAGE value="atualização na classe searchbar e criação da artistadialog para retornar busca de nomes de artistas feitas pela api" />
+    <MESSAGE value="adição da função de buscar por ID na classe albumDao e correções nas outras daos" />
+    <MESSAGE value="mudança na versão do appdatabase para limpar o banco de dados" />
+    <MESSAGE value="atualização da main para instanciar o spotifyviewmodel" />
+    <MESSAGE value="Criação do Retrofit para fazer a comunicação com api do spotify e criação da classe SpotifyApi(service) para fazer conexão com os endpoints" />
+    <MESSAGE value="Criação do SpotifyAuth para fazer a autenticação do token de acesso á API do Spotify. Criada a classe SpotifyApiClient responsável para para fazer as requisições para os endpoints" />
+    <MESSAGE value="Criação da SpotifyVM para fazer a intermediação da api com a interface. Criação do SpotifyVMFactory" />
+    <MESSAGE value="Criação das classes AlbumsResponse, PlaylistResponse, SearchResponse, para mapear as respostas da api" />
+    <MESSAGE value="Criação da PlaylistDetailsScreen para exibir as músicas das playlists obtidas através da API" />
+    <MESSAGE value="Import da dependencia do coil compose para exibir a imagem das playlists" />
+    <MESSAGE value="Correção das viewmodels de Album e Artista" />
+    <MESSAGE value="libs.versions incluso" />
+    <option name="LAST_COMMIT_MESSAGE" value="libs.versions incluso" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/musicwhisky1/viewmodel/AlbumVM.kt</url>
+          <line>28</line>
+          <properties class="com.example.mvvm2.viewmodel.AlbumVM" method="salvar">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/musicwhisky1/viewmodel/AlbumVM.kt</url>
+          <line>64</line>
+          <properties class="com.example.mvvm2.viewmodel.AlbumVM" method="atualizar">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/musicwhisky1/view/TelaGerenciamentoArtista.kt</url>
+          <line>37</line>
+          <properties method="TelaGerenciamentoAlbum">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/musicwhisky1/view/TelaGerenciamentoAlbum.kt</url>
+          <line>42</line>
+          <properties method="TelaGerenciamentoAlbum">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/musicwhisky1/view/TelaGerenciamentoArtista.kt</url>
+          <line>145</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

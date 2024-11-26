@@ -1,0 +1,7 @@
+#Tue Nov 26 13:43:29 BRT 2024
+base.0=C\:\\Users\\kevin\\AndroidStudioProjects\\Musicwhisky3\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+base.1=C\:\\Users\\kevin\\AndroidStudioProjects\\Musicwhisky3\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
