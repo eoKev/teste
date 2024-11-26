@@ -117,6 +117,7 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                     if (nomeArtista.isNotBlank()) {
                         val artista = artistaVM.buscarPorNome(nomeArtista)
                         if (artista != null) {
+                            // Exibe o campo de novo nome para atualização
                             showUpdateField = true
                         } else {
                             dialogState = DialogState(
@@ -124,8 +125,7 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                                 message = "Artista não encontrado para atualização!",
                                 onConfirm = { dialogState = null },
                                 onDismiss = { dialogState = null },
-                                okOnly = true,
-
+                                okOnly = true
                             )
                         }
                     } else {
@@ -143,6 +143,46 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                     .weight(1f)
             ) {
                 Text("Atualizar")
+            }
+        }
+
+        // Exibe o TextField para o novo nome somente se a atualização for necessária
+        if (showUpdateField) {
+            Spacer(modifier = Modifier.height(16.dp))
+            TextField(
+                value = nomeArtistaNovo,
+                onValueChange = { nomeArtistaNovo = it },
+                label = { Text("Novo nome do artista") },
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = {
+                    if (nomeArtistaNovo.isNotBlank()) {
+                        artistaVM.atualizar(
+                            nome = nomeArtista,
+                            nomeNovo = nomeArtistaNovo,
+                            context = context
+                        )
+                        showUpdateField = false // Esconde o campo de novo nome após atualização
+                        nomeArtistaNovo = "" // Limpa o campo do novo nome
+                        dialogState = null
+                    } else {
+                        dialogState = DialogState(
+                            title = "Aviso",
+                            message = "Por favor, forneça um novo nome para o artista.",
+                            onConfirm = { dialogState = null },
+                            onDismiss = { dialogState = null },
+                            okOnly = true
+                        )
+                    }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+            ) {
+                Text("Confirmar Atualização")
             }
         }
 
@@ -172,7 +212,7 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                                 onConfirm = {
                                     artistaVM.excluir(nomeArtista, context)
                                     dialogState = null
-                                    nomeArtista = "" // Limpar o campo após excluir
+                                    nomeArtista = ""
                                 },
                                 onDismiss = { dialogState = null },
                                 okOnly = false
@@ -225,7 +265,7 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                                     .clickable { /* Clique no artista */ },
                                 colors = CardDefaults.cardColors(
                                     containerColor = MaterialTheme.colorScheme.background)
-                                ) {
+                            ) {
                                 Column(
 
                                     modifier = Modifier
@@ -250,9 +290,9 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
         }
 
         // Botão de voltar
-        Spacer(modifier = Modifier.weight(1f)) // Empurra elementos para o topo
+        Spacer(modifier = Modifier.weight(1f))
         Button(
-            onClick = { navController.popBackStack() }, // Navega para a tela anterior
+            onClick = { navController.popBackStack() },
             modifier = Modifier.align(Alignment.CenterHorizontally)
         ) {
             Text("Voltar")
@@ -263,6 +303,5 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
         ConfirmDialog(dialogState = it, onDismissRequest = { dialogState = null })
     }
 }
-
 
 
