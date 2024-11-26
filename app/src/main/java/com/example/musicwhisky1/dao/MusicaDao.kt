@@ -17,11 +17,9 @@ interface MusicaDao {
     @Insert
     suspend fun inserir(musica: Musica)
 
-    // Obter todas as músicas
     @Query("SELECT * FROM musicas")
     suspend fun buscarTodos(): List<Musica>
 
-    // Obter uma música específica pelo ID
     @Query("SELECT * FROM musicas WHERE id = :musicaId")
     fun ListarPorId(musicaId: Int): LiveData<Musica>
 
@@ -37,6 +35,9 @@ interface MusicaDao {
 
     @Query("SELECT * FROM musicas WHERE idAlbum = :idAlbum")
     fun musicasAlbum(idAlbum: Int): List<Musica>
+
+    @Insert
+    suspend fun insert(artistas: List<Musica>)
 
 }
 

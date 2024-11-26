@@ -12,7 +12,6 @@ import com.example.musicwhisky1.model.Musica
 
 @Dao
 interface ArtistaDao {
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun inserir(artista: Artista)
 
@@ -31,5 +30,6 @@ interface ArtistaDao {
     @Query("SELECT * FROM artistas WHERE nome LIKE '%' || :nome || '%'")
     fun buscarPorNome(nome: String): LiveData<List<Artista>>
 
-
+    @Insert
+    suspend fun insert(artistas: List<Artista>)
 }

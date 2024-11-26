@@ -42,4 +42,7 @@ interface AlbumDao {
     @Query("SELECT * FROM albuns WHERE nome LIKE '%' || :nome || '%'")
     fun buscarPorNome(nome: String): LiveData<List<Album>>
 
+    @Insert
+    suspend fun insert(artistas: List<Album>)
+
 }
