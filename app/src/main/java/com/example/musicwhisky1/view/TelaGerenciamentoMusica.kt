@@ -54,32 +54,29 @@ fun TelaGerenciamentoMusica(
     albumVM: AlbumVM
 ) {
     var nomeMusica by remember { mutableStateOf("") }
-    var nomeArtista by remember { mutableStateOf("")}
-    var nomeAlbum by remember { mutableStateOf("")}
+    var nomeArtista by remember { mutableStateOf("") }
+    var nomeAlbum by remember { mutableStateOf("") }
     var duracao by remember { mutableStateOf("") }
     var dialogState by remember { mutableStateOf<DialogState?>(null) }
     var showArtistList by remember { mutableStateOf(false) }
     val context = LocalContext.current
-    val artistasList = artistaVM.listar.value // Lista de artistas
-    val albunsList = albumVM.listar.value // Lista de álbuns
+    val artistasList = artistaVM.listar.value
+    val albunsList = albumVM.listar.value
     val musicaList = musicaVM.listar.value
-
-
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(top = 64.dp, start = 16.dp, end = 16.dp), // Aumentei o padding do topo para 32.dp
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Cadastrar Música",
+            text = "Gerenciamento de Músicas",
             style = MaterialTheme.typography.titleLarge,
             modifier = Modifier.padding(bottom = 16.dp),
             color = MaterialTheme.colorScheme.primary
         )
 
-        // Campo para o nome da música
         TextField(
             value = nomeMusica,
             onValueChange = { nomeMusica = it },
@@ -89,15 +86,12 @@ fun TelaGerenciamentoMusica(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Campo de texto para artista
         TextField(
             value = nomeArtista,
             onValueChange = { nomeArtista = it },
             label = { Text("Artista") },
             modifier = Modifier.fillMaxWidth()
-
         )
-
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -111,7 +105,6 @@ fun TelaGerenciamentoMusica(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Campo de texto para duração
         TextField(
             value = duracao,
             onValueChange = { duracao = it },
@@ -121,7 +114,6 @@ fun TelaGerenciamentoMusica(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Botões para salvar, atualizar e excluir
         Row(
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             modifier = Modifier.fillMaxWidth()
@@ -130,12 +122,11 @@ fun TelaGerenciamentoMusica(
                 onClick = {
                     dialogState = DialogState(
                         title = "Confirmar Salvamento",
-                        message = "Deseja salva a música '$nomeMusica'?",
+                        message = "Deseja salvar a música '$nomeMusica'?",
                         onConfirm = {
                             val artista = artistaVM.buscarPorNome(nomeArtista)
                             val album = albumVM.buscarPorNome(nomeAlbum)
-
-                            if (artista != null && album != null){
+                            if (artista != null && album != null) {
                                 musicaVM.salvar(
                                     idArtista = artista.id,
                                     idAlbum = album.id,
@@ -153,7 +144,7 @@ fun TelaGerenciamentoMusica(
                             }
                             dialogState = null
                         },
-                        onDismiss = { dialogState = null},
+                        onDismiss = { dialogState = null },
                         okOnly = false
                     )
                 },
@@ -166,15 +157,15 @@ fun TelaGerenciamentoMusica(
 
             Button(
                 onClick = {
-                   val musica = musicaVM.buscarPorNome(nomeMusica)
-                    if (musica != null){
+                    val musica = musicaVM.buscarPorNome(nomeMusica)
+                    if (musica != null) {
                         dialogState = DialogState(
                             title = "Confirmar Atualização",
                             message = "Atualizar música '$nomeMusica'?",
                             onConfirm = {
                                 val album = albumVM.buscarPorNome(nomeAlbum)
                                 val artista = artistaVM.buscarPorNome(nomeArtista)
-                                if (artista!=null && album!= null){
+                                if (artista != null && album != null) {
                                     musicaVM.atualizar(
                                         idArtista = artista.id,
                                         idAlbum = album.id,
@@ -248,7 +239,7 @@ fun TelaGerenciamentoMusica(
             }
         }
 
-        // Exibe a lista de artistas se a flag showArtistList for verdadeira
+        // Exibe a lista de músicas se a flag showArtistList for verdadeira
         if (showArtistList) {
             Spacer(modifier = Modifier.height(16.dp))
             LazyColumn(
@@ -268,35 +259,35 @@ fun TelaGerenciamentoMusica(
                                     .padding(end = 80.dp)
                                     .clickable { /* Clique no artista */ },
                                 colors = CardDefaults.cardColors(
-                                    containerColor = MaterialTheme.colorScheme.background)
+                                    containerColor = MaterialTheme.colorScheme.background
+                                )
                             ) {
                                 Column(
-
                                     modifier = Modifier
                                         .fillMaxSize()
                                         .background(MaterialTheme.colorScheme.surface)
                                         .padding(16.dp),
-
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center
                                 ) {
-                                    val artistaNome =
-                                        artistaVM.buscarPorId(musica.idArtista)?.nome
-                                            ?: "Desconhecido"
+                                    val artistaNome = artistaVM.buscarPorId(musica.idArtista)?.nome ?: "Desconhecido"
+                                    val albumNome = albumVM.buscarPorId(musica.idAlbum)?.nome ?: "Desconhecido"
                                     Text(
                                         text = buildAnnotatedString {
                                             withStyle(style = SpanStyle(fontSize = MaterialTheme.typography.headlineMedium.fontSize)) {
                                                 append("${musica.nome}\n")
                                             }
                                             withStyle(style = SpanStyle(fontSize = MaterialTheme.typography.bodySmall.fontSize)) {
-                                                append(artistaNome)
+                                                append("Artista: $artistaNome\n")
+                                                append("Álbum: $albumNome\n")
+                                                append("Duração: ${musica.duracao} segundos")
                                             }
                                         },
                                         color = MaterialTheme.colorScheme.onTertiary,
-                                         // Centraliza todo o texto dentro do componente
-                                        modifier = Modifier.fillMaxWidth() // Garante que o texto ocupe toda a largura disponível
+                                        textAlign = TextAlign.Center,
+                                        modifier = Modifier.fillMaxWidth()
                                     )
-                               }
+                                }
                             }
                         }
                     }

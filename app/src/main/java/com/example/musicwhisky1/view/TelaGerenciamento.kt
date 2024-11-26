@@ -19,10 +19,6 @@ fun TelaGerenciamento(navController: NavController) {
 
     HomeIcon(onClick = { navController.navigate("home") }, iconSize = 32)
 
-    SearchBar(
-        query = query,
-        onQueryChange = { newQuery -> query = newQuery }
-    )
 
     Spacer(modifier = Modifier.height(16.dp)) // Espaço entre a barra de pesquisa e os botões
 
@@ -57,10 +53,4 @@ fun TelaGerenciamento(navController: NavController) {
             Text("Música")
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewTelaCadastro() {
-    TelaGerenciamento(navController = rememberNavController())
 }

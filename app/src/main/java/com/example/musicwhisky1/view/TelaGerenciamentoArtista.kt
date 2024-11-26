@@ -47,11 +47,11 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(top = 64.dp, start = 16.dp, end = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Cadastrar Artista",
+            text = "Gerenciamento de Artistas",
             style = MaterialTheme.typography.titleLarge,
             modifier = Modifier.padding(bottom = 16.dp),
             color = MaterialTheme.colorScheme.primary
@@ -89,7 +89,7 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                                 onConfirm = {
                                     artistaVM.salvar(nomeArtista, context)
                                     dialogState = null
-                                    nomeArtista = "" // Limpar o campo após salvar
+                                    nomeArtista = ""
                                 },
                                 onDismiss = { dialogState = null },
                                 okOnly = false
@@ -117,7 +117,6 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                     if (nomeArtista.isNotBlank()) {
                         val artista = artistaVM.buscarPorNome(nomeArtista)
                         if (artista != null) {
-                            // Exibe o campo de novo nome para atualização
                             showUpdateField = true
                         } else {
                             dialogState = DialogState(
@@ -146,7 +145,6 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
             }
         }
 
-        // Exibe o TextField para o novo nome somente se a atualização for necessária
         if (showUpdateField) {
             Spacer(modifier = Modifier.height(16.dp))
             TextField(
@@ -166,8 +164,7 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
                             nomeNovo = nomeArtistaNovo,
                             context = context
                         )
-                        showUpdateField = false // Esconde o campo de novo nome após atualização
-                        nomeArtistaNovo = "" // Limpa o campo do novo nome
+                        showUpdateField = false
                         dialogState = null
                     } else {
                         dialogState = DialogState(
@@ -289,7 +286,6 @@ fun TelaGerenciamentoArtista(navController: NavController, artistaVM: ArtistaVM)
             }
         }
 
-        // Botão de voltar
         Spacer(modifier = Modifier.weight(1f))
         Button(
             onClick = { navController.popBackStack() },
