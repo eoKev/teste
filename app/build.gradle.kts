@@ -51,13 +51,14 @@ android {
 }
 
 dependencies {
+
     val roomVersion = "2.6.1"
 
     // Room Database
     implementation("androidx.room:room-runtime:$roomVersion")
-    ksp("androidx.room:room-compiler:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
-
+    ksp("androidx.room:room-compiler:$roomVersion")
     // Retrofit & OkHttp
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
@@ -71,9 +72,10 @@ dependencies {
     // Navigation do JetpackCompose
     implementation ("androidx.navigation:navigation-compose:2.8.0")
 
-    // Material 3 para elementos de interface
+    // Import do coil-compose para exibir a imagem das playlists
+    implementation("io.coil-kt:coil-compose:2.2.2")
     implementation("androidx.compose.material3:material3:1.0.0")
-    
+    implementation("androidx.activity:activity-compose:1.7.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
