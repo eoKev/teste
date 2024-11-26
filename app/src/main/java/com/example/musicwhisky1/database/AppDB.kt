@@ -31,8 +31,7 @@ abstract class AppDB : RoomDatabase() {
                     AppDB::class.java,
                     "musicwhisky.db"
                 )
-                    // Usar fallbackToDestructiveMigration para recriar o banco de dados a cada mudança de versão
-                    .fallbackToDestructiveMigration() // Isso garante que o banco de dados será excluído e recriado
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 instance
@@ -40,4 +39,3 @@ abstract class AppDB : RoomDatabase() {
         }
     }
 }
-
