@@ -66,27 +66,22 @@ class ArtistaVM(private val artistaDao: ArtistaDao) : ViewModel() {
             return
         }
 
-        // Verifica se já existe um artista com o novo nome
         val artistaExistente = buscarPorNome(nomeNovo)
         if (artistaExistente != null && artistaExistente.nome != nome) {
             exibirToast(context, "Já existe um artista com este nome!")
             return
         }
-
-        // Busca o artista pelo nome antigo (nomeArtista)
         val artista = buscarPorNome(nome)
         if (artista == null) {
             exibirToast(context, "Artista não encontrado, verifique o nome!")
             return
         }
 
-        // Cria uma nova instância de Artista com o novo nome
         val artistaAtualizado = artista.copy(nome = nomeNovo)
 
-        // Atualiza o artista no banco de dados
         viewModelScope.launch {
             artistaDao.atualizar(artistaAtualizado)
-            carregar()  // Recarrega a lista de artistas
+            carregar()
             exibirToast(context, "Artista atualizado com sucesso!")
         }
     }

@@ -29,37 +29,32 @@ class AlbumVM(private val albumDao: AlbumDao, private val artistaDao: ArtistaDao
     fun salvar(nome: String, quantidadeMusicas: Int, dataLancamento: String,
         genero: String, idArtista: Int, context: Context
     ){
-        // Verificando se os campos obrigatórios estão preenchidos
+
         if (nome.isBlank() || dataLancamento.isBlank() || genero.isBlank() || quantidadeMusicas <= 0 || idArtista <= 0) {
             exibirToast(context, "Preencha todos os campos corretamente!")
             return
         }
-
-        // Verificando se o álbum já existe no banco
         val albumExistente = buscarPorNome(nome)
         if (albumExistente != null) {
             exibirToast(context,"Álbum já cadastrado!" )
             return
         }
 
-        // Verificando se o artista existe no banco (usando o idArtista)
         val artista = artistaDao.buscarPorId(idArtista) // Método para buscar por ID
         if (artista == null) {
             exibirToast(context,"Artista não encontrado! Verifique o nome")
             return
         }
 
-        // Criando o objeto do álbum com os dados fornecidos
         val album = Album(
-            id = 0,  // O id será gerado automaticamente pelo banco de dados
+            id = 0,
             nome = nome,
             quantidadeMusicas = quantidadeMusicas,
             dataLancamento = dataLancamento,
             genero = genero,
-            idArtista = idArtista  // Usando o idArtista passado
+            idArtista = idArtista
         )
 
-        // Inserindo o álbum no banco de dados
         viewModelScope.launch {
             albumDao.inserir(album)
             carregar()
@@ -112,6 +107,10 @@ class AlbumVM(private val albumDao: AlbumDao, private val artistaDao: ArtistaDao
         }
     }
 
+    fun buscarPorId(id: Int): Album? {
+        return listar.value.find { it.id == id }
+    }
+
     fun buscarPorNome(nome: String): Album? {
         return listar.value.find { it.nome.equals(nome, ignoreCase = true) }
     }
@@ -119,4 +118,6 @@ class AlbumVM(private val albumDao: AlbumDao, private val artistaDao: ArtistaDao
     private fun exibirToast(context: Context, mensagem: String) {
         Toast.makeText(context, mensagem, Toast.LENGTH_LONG).show()
     }
+
+
 }
